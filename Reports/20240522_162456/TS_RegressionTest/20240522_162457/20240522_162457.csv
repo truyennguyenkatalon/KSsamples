@@ -1,0 +1,48 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest,Chrome 124.0.0.0,,,22-05-2024 16:24:58,22-05-2024 16:25:30,31.301s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login,Chrome 124.0.0.0,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,22-05-2024 16:24:59,22-05-2024 16:25:12,13.223s,PASSED
+"comment(""Story: Login to CURA system"")",Chrome 124.0.0.0,,,22-05-2024 16:24:59,22-05-2024 16:24:59,0.030s,PASSED
+"comment(""Given that the user has the valid login information"")",Chrome 124.0.0.0,,,22-05-2024 16:24:59,22-05-2024 16:24:59,0.005s,PASSED
+openBrowser(G_SiteURL),Chrome 124.0.0.0,,,22-05-2024 16:24:59,22-05-2024 16:25:06,7.564s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Chrome 124.0.0.0,,,22-05-2024 16:25:06,22-05-2024 16:25:07,0.781s,PASSED
+"setText(findTestObject(""Page_Login/txt_UserName""), Username)",Chrome 124.0.0.0,,,22-05-2024 16:25:07,22-05-2024 16:25:08,0.588s,PASSED
+"setText(findTestObject(""Page_Login/txt_Password""), Password)",Chrome 124.0.0.0,,,22-05-2024 16:25:08,22-05-2024 16:25:08,0.533s,PASSED
+"comment(""When he logins to CURA system"")",Chrome 124.0.0.0,,,22-05-2024 16:25:08,22-05-2024 16:25:08,0.004s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 124.0.0.0,,,22-05-2024 16:25:08,22-05-2024 16:25:09,0.764s,PASSED
+"comment(""Then he should be able to login successfully"")",Chrome 124.0.0.0,,,22-05-2024 16:25:09,22-05-2024 16:25:09,0.003s,PASSED
+"landingPage = verifyElementPresent(findTestObject(""Page_CuraAppointment/div_Appointment""), G_Timeout)",Chrome 124.0.0.0,,,22-05-2024 16:25:09,22-05-2024 16:25:10,0.473s,PASSED
+closeBrowser(),Chrome 124.0.0.0,,,22-05-2024 16:25:10,22-05-2024 16:25:10,0.094s,PASSED
+Video,Chrome 124.0.0.0,,,22-05-2024 16:25:12,22-05-2024 16:25:12,0.001s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment,Chrome 124.0.0.0,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,22-05-2024 16:25:12,22-05-2024 16:25:30,17.912s,PASSED
+"comment(""Story: Book an appointment"")",Chrome 124.0.0.0,,,22-05-2024 16:25:12,22-05-2024 16:25:12,0.003s,PASSED
+"comment(""Given that the user has logged into their account"")",Chrome 124.0.0.0,,,22-05-2024 16:25:12,22-05-2024 16:25:12,0.002s,PASSED
+openBrowser(G_SiteURL),Chrome 124.0.0.0,,,22-05-2024 16:25:12,22-05-2024 16:25:19,7.224s,PASSED
+"callTestCase(findTestCase(""Common Test Cases/Login""), [""Username"":""John Doe"", ""Password"":""ThisIsNotAPassword""], STOP_ON_FAILURE)",Chrome 124.0.0.0,,,22-05-2024 16:25:19,22-05-2024 16:25:22,3.294s,PASSED
+"comment(""And Appointment page is displayed"")",Chrome 124.0.0.0,,,22-05-2024 16:25:22,22-05-2024 16:25:22,0.002s,PASSED
+if (true),Chrome 124.0.0.0,,,22-05-2024 16:25:22,22-05-2024 16:25:25,2.342s,PASSED
+"comment(""When he fills in valid information in Appointment page"")",Chrome 124.0.0.0,,,22-05-2024 16:25:25,22-05-2024 16:25:25,0.004s,PASSED
+"click(findTestObject(""Page_CuraAppointment/btn_BookAppointment""))",Chrome 124.0.0.0,,,22-05-2024 16:25:25,22-05-2024 16:25:25,0.602s,PASSED
+"verifyTextPresent(""Appointment Confirmation"", false)",Chrome 124.0.0.0,,,22-05-2024 16:25:25,22-05-2024 16:25:26,0.467s,PASSED
+"comment(""Then he should be able to book a new appointment"")",Chrome 124.0.0.0,,,22-05-2024 16:25:26,22-05-2024 16:25:26,0.009s,PASSED
+if (true),Chrome 124.0.0.0,,,22-05-2024 16:25:26,22-05-2024 16:25:27,1.269s,PASSED
+takeScreenshot(),Chrome 124.0.0.0,,,22-05-2024 16:25:27,22-05-2024 16:25:28,0.479s,PASSED
+closeBrowser(),Chrome 124.0.0.0,,,22-05-2024 16:25:28,22-05-2024 16:25:28,0.149s,PASSED
+Video,Chrome 124.0.0.0,,,22-05-2024 16:25:30,22-05-2024 16:25:30,0.000s,PASSED

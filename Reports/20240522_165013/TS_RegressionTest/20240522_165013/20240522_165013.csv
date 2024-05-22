@@ -1,0 +1,20 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest,Chrome 124.0.0.0,,,22-05-2024 16:50:14,22-05-2024 16:50:23,9.172s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login,Chrome 124.0.0.0,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,22-05-2024 16:50:14,22-05-2024 16:50:23,8.997s,PASSED
+"openBrowser("""")",Chrome 124.0.0.0,,,22-05-2024 16:50:14,22-05-2024 16:50:16,1.310s,PASSED
+"navigateToUrl(""https://katalon-demo-cura.herokuapp.com/"")",Chrome 124.0.0.0,,,22-05-2024 16:50:16,22-05-2024 16:50:18,2.628s,PASSED
+"click(findTestObject(""Object Repository/Page_CURA Healthcare Service/a_Make Appointment""))",Chrome 124.0.0.0,,,22-05-2024 16:50:18,22-05-2024 16:50:19,0.775s,PASSED
+"setText(findTestObject(""Object Repository/Page_CURA Healthcare Service/input_Username_username""), ""John Doe"")",Chrome 124.0.0.0,,,22-05-2024 16:50:19,22-05-2024 16:50:20,0.697s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_CURA Healthcare Service/input_Password_password""), ""g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM"")",Chrome 124.0.0.0,,,22-05-2024 16:50:20,22-05-2024 16:50:20,0.302s,PASSED
+"click(findTestObject(""Object Repository/Page_CURA Healthcare Service/button_Login""))",Chrome 124.0.0.0,,,22-05-2024 16:50:20,22-05-2024 16:50:21,0.771s,PASSED
+closeBrowser(),Chrome 124.0.0.0,,,22-05-2024 16:50:21,22-05-2024 16:50:21,0.145s,PASSED
+Video,Chrome 124.0.0.0,,,22-05-2024 16:50:23,22-05-2024 16:50:23,0.001s,PASSED
